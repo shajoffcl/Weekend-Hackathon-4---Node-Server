@@ -19,7 +19,7 @@ function handleServer(req, res) {
         res.end();
     }
     else{
-        res.writeHead(200, {'Content-Type':'default'});
+        res.writeHead(404, {'Content-Type':'default'});
         res.end();
     }
 }
