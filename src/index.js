@@ -5,7 +5,7 @@ const httpServer = http.createServer(handleServer);
 
 function handleServer(req, res) {
     if(req.url==="/welcome"){
-        res.writeHead(200, {'Content-Type':'text/html'});
+        res.writeHead(200, {'Content-Type':'text/plain'});
         res.write("Welcome to Dominos!");
         res.end();
     }
@@ -19,7 +19,7 @@ function handleServer(req, res) {
         res.end();
     }
     else{
-        res.StatusCode=404;
+        res.writeHead(200, {'Content-Type':'default'});
         res.end();
     }
 }
